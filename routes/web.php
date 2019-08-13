@@ -12,6 +12,7 @@
 */
 Route::resource('/painel/sitecadastro','Painel\CadsiteController');
 
+
 Route::get('/', function () {
     return view('welcome');
 });

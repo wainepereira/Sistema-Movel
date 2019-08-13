@@ -1,6 +1,16 @@
-@extends('templetes.templete')
+@extends('adminlte::page')
 
-@section('conteudo')
+@section('title', 'Morpheus Sistema de Cadastro Movel')
+
+@section('content_header')
+    <ol class="breadcrumb">
+      <li><a href="">Dashboard</a></li>
+      <li><a href="">Painel</a></li>
+      <li><a href="">Deletar</a></li>       
+  </ol>
+@stop
+
+@section('content')
 <div class="container">
 <div class="container">
         <div class="col-xs-12">
@@ -31,5 +41,5 @@
 </form>
  </div>
 
-@endsection
+ @stop
 
