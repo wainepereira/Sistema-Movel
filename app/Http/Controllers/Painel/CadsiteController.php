@@ -13,7 +13,7 @@ class CadsiteController extends Controller
     private $totalpagina  = 10;
     public function __construct(CadastroSite $CadastroSite)
     {
-        $this->middleware('auth');
+      //  $this->middleware('auth');
 
         $this->CadastroSite = $CadastroSite;
         
@@ -73,10 +73,6 @@ $messages = [
 
      
     $criar = $this->CadastroSite->create($dataForm);
-
- 
-
-
     
             if($criar)
             return redirect ()-> route('sitecadastro.index');
