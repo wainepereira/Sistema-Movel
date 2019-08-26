@@ -12,14 +12,23 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #A020F0;
+                color: #F5DEB3;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
             }
+            body{
+                
+                width:100%;
+                height:120vh;
+                background: url('img/5g-5.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size:cover;
 
+            }
             .full-height {
                 height: 100vh;
             }
@@ -40,22 +49,40 @@
                 top: 18px;
             }
 
-            .content {
+            .header {
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%,-50%);
                 text-align: center;
             }
-
+            .header h1{
+                color: #8B008B;
+                font-size: 48px;
+                font-weight: 400; 
+                margin-bottom: 8px ;
+                text-shadow: 0.1em 0.1em 0.2em black;
+            }
+            .header p{
+                color: #8B008B;
+                font-size:26px;
+                font-weight: lighter;
+                text-shadow: 0.1em 0.1em 0.2em black;
+            }
             .title {
                 font-size: 84px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #8B0081;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,
+        0 0 0.2em #87F;
             }
 
             .m-b-md {
@@ -78,21 +105,14 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+            <div class="header">
+            <h1> <b> Morpheus</b></h1>
+            <p><b>
+            Vistoria em Rede Movel com Drone 
+            </b></p>
+        
+            </div>
+        
             </div>
         </div>
     </body>

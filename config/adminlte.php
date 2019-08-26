@@ -118,7 +118,7 @@ return [
         ],
         [
             'text'        => 'Cadastrar Foto',
-            'url'         => 'painel/sitecadastro',
+            'url'         => 'painel/galeria',
             'icon'        => 'far fa-images',
            
         ],
