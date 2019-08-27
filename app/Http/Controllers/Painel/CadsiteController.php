@@ -101,24 +101,10 @@ $messages = [
      */
     public function edit($id_cad_sit)
     {
+    
      $cadastro = $this->CadastroSite->find($id_cad_sit); 
 
-     $messages = [
-    
-        'Nome.required' => 'Este campo Nome e Obrigatorio!',
-        'Endereco.required' => 'Este campo Endereço e Obrigatorio!',
-        'Detentora.required' => 'Este campo Detentora e Obrigatorio!',
-        'tecnologia.required' => 'Este campo Tecnologia e Obrigatorio!',
-    
-    ];
-    
-          $validate = validator($dataForm, $this->CadastroSite->rules, $messages);
-            if ($validate->fails()) {
-                return redirect()
-                        ->route('sitecadastro.create-edit')
-                        ->withErrors($validate)
-                        ->withInput();
-            }
+
      $title = "Editando o Cadastro {$cadastro->Nome}";
 
      return view('painel.site.create-edit', compact('title','cadastro'));

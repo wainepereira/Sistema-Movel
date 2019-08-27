@@ -13,7 +13,7 @@ class CreateVistoriafotoTable extends Migration
      */
     public function up()
     {
-        Schema::create('vistoriafoto', function (Blueprint $table) {
+        Schema::create('vistoria_fotos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('Nome','200');   
             $table->dateTime('data');
@@ -32,6 +32,6 @@ class CreateVistoriafotoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vistoriafotos');
+        Schema::dropIfExists('vistoria_fotos');
     }
 }

@@ -11,6 +11,11 @@
 @stop
 
 @section('content')
+@if(Session::has('msg'))
+<div class="alert alert-success">
+{{ Session::get('msg')}}
+</div>
+@endif
 <div class="container">
         <div class="col-xs-12">
             <p>
@@ -23,5 +28,34 @@
                 <br/>
           </div>
 </div>
+<div class="col-sm9">
+                
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome do Site:</th>
+                        <th scope="col">Quantidade de Fotos</th>
+                        <th scope="col" >Ação</th>
+                      </tr>
+                    </thead>
+                   
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    
+                  
+                    <td>
+                    <a href=""class="actions edit"> <span class="fas fa-pencil-alt"></span></a>
+                    <a href=""class="actions delete"> <span class="fas fa-trash-alt" ></span>
+                    
+                    </a>
+                    </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+
 
 @stop

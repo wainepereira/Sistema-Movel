@@ -48,10 +48,27 @@
                 right: 10px;
                 top: 18px;
             }
-
+            .drone{
+                position:absolute;
+                top:40%;
+                left:30%;
+                transform: translate(-50%,-50%);
+                animation: fly 4s ease-in-out infinite;
+            }
+            @keyframes fly{
+                0%{
+                    transform: translate(-50%, -46%);
+                }
+                50%{
+                    transform: translate(-50%, -54%);
+                }
+                100%{
+                    transform: translate(-50%, -46%);
+                }
+            }
             .header {
                 position: absolute;
-                top: 50%;
+                top: 60%;
                 left:50%;
                 transform: translate(-50%,-50%);
                 text-align: center;
@@ -105,7 +122,13 @@
                     @endauth
                 </div>
             @endif
+           
+           <div class="drone" id="drone">
+            <img src="img/Drone.png" alt="drone" width="420" height="305" />
+           </div>
+
             <div class="header">
+            
             <h1> <b> Morpheus</b></h1>
             <p><b>
             Vistoria em Rede Movel com Drone 
@@ -115,5 +138,17 @@
         
             </div>
         </div>
+        <footer>
+        <div style="background-color: #fffff;">
+
+        <!-- Copyright -->
+        <center>
+     <div class="footer-copyright text-center py-3" style="background-color: #8B008B">© 2019 Copyright:
+        <a href="mailto:waine.gomes@telefonica.com" target="_top" > <i> Waine Pereira Gomes - Eng&OP Centro Oeste</i></a>
+  </div>
+  </center>
+  <!-- Copyright -->
+</div>
+</footer>
     </body>
 </html>

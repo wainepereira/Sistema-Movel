@@ -43,7 +43,7 @@
 
 </select>
 <br />   <br />
-    Selecione uma imagem: <input name="img" type="file" />
+    Selecione uma imagem: <input type="file" name="img[]" multiple  />
    <br />
 
    
