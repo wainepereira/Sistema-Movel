@@ -1,7 +1,12 @@
-@extends('layouts.gallery')
+@extends('adminlte::page')
 
-@section('conteudo')
+@section('title', 'Morpheus Sistema de Cadastro Movel')
 
+@section('content_header')
+
+@stop
+
+@section('content')
 @if(count($galerias)> 0)
 <?php
 $colcout = count($galerias);
@@ -13,14 +18,14 @@ $i=1
                 @if($i==$colcout)
                 <div class='medium-4 columns end'>
                     <a href="/albums/{{$dados->id}}">
-                    <img class="thumbnail" src="../storage/album_covers/{{$dados->cover_image}}" height="212" width="400" alt="{{$dados->name}}">
+                    <img class="thumbnail" src="storage/album_covers/{{$dados->cover_image}}" height="212" width="400" alt="{{$dados->name}}">
                     </a>
                     <br>
                     <h4>{{$dados->name}}</h4>
                     @else
                         <div class="medium-4 columns">
                         <a href="/albums/{{$dados->id}}">
-                        <img class="thumbnail" src="../storage/album_covers/{{$dados->cover_image}}" height="212" width="400" alt="{{$dados->name}}" >
+                        <img class="thumbnail" src="storage/album_covers/{{$dados->cover_image}}" height="212" width="400" alt="{{$dados->name}}" >
                         </a>
                         <br>
                         <h4>{{$dados->name}}<h4>
@@ -39,4 +44,4 @@ $i=1
             <p> Não tem Album disponivel</p>
         @endif
 
-@endsection
+@stop

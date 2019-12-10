@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>::Morphes :: Sistema de Vistoria Movel::</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -112,8 +112,9 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" >Home</a>
                     @else
+                        <a href="/albums" style="background-color: #fff">Galeria </a>
                         <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
@@ -143,8 +144,8 @@
 
         <!-- Copyright -->
         <center>
-     <div class="footer-copyright text-center py-3" style="background-color: #8B008B">© 2019 Copyright:
-        <a href="mailto:waine.gomes@telefonica.com" target="_top" > <i> Waine Pereira Gomes - Eng&OP Centro Oeste</i></a>
+     <div class="footer-copyright text-center py-3" style="background-color: #8B008B">© 2019 Copyright: 
+         <i style="background-color: #8B008B"> Desenvolvido por  Waine Pereira Gomes - Eng&OP Centro Oeste</i>
   </div>
   </center>
   <!-- Copyright -->

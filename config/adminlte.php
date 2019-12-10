@@ -111,8 +111,8 @@ return [
         
         ['header' => 'Menu'],
         [
-            'text'        => 'Cadastrar Site',
-            'url'         => 'painel/sitecadastro',
+            'text'        => 'Cadastrar Galeria',
+            'url'         => 'albums/create',
             'icon'        => 'far fa-file',
            
         ],
@@ -134,7 +134,13 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
-        ['header' => 'Cadastrar Usuario'],
+        ['header' => 'Galeria Fotos'],
+        [
+            'text'        => 'Visualizar Galeria',
+            'url'         => 'painel/galeria',
+            'icon'        => 'far fa-images',
+           
+        ],
     ],
 
     /*

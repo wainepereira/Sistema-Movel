@@ -24,7 +24,9 @@
                      <center> Galeria de fotos </center>                        
                 </h2>
             </p>
-               <a href="{{route('galeria.create')}}"> <button type="button" class="btn btn-primary btn-space "><i class="ícone ion-md-add"> Cadastrar</i></button></a>
+               <a href="{{route('galeria.create')}}"> 
+               <button type="button" class="btn btn-primary btn-space ">
+               <i class="ícone ion-md-add"> Cadastrar</i></button></a>
                 <br/>
           </div>
 </div>
@@ -39,7 +41,9 @@
                         <th scope="col" >Ação</th>
                       </tr>
                     </thead>
-                   
+               
+                
+                
                 <tr>
                     <th scope="row"></th>
                     <td></td>
@@ -53,7 +57,7 @@
                     </a>
                     </td>
                   </tr>
-                 
+                
                 </tbody>
               </table>
 

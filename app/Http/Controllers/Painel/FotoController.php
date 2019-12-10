@@ -19,9 +19,11 @@ class FotoController extends Controller
     }
     public function index()
     {
-
+        //recuperar os dados
+       // $ftos = VistoriaFoto::get();
         $title = "Galeria de fotos - Vistoria";
-        return view ('painel.galeria.index', compact('sites','title'));
+
+        return view ('painel.galeria.index', compact('galerias','title'));
     }
     
     /**
@@ -42,12 +44,10 @@ class FotoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-      
-        if ($request->hasFile('img')){
-            $imagens_array = $request->file('img');
-            $array_len = count($imagens_array);
+    public function store(Request $request) {
+              if ($request->hasFile('img')){
+              $imagens_array = $request->file('img');
+              $array_len = count($imagens_array);
 
             for ($i=0; $i < $array_len ; $i++){
            
@@ -64,19 +64,25 @@ class FotoController extends Controller
                 $VistoriaFoto->Comentario = $imagens_size;
                 $VistoriaFoto->cadastro_id = $Cad_site;
                 $VistoriaFoto->save();
-            }
-            return back()->with('msg', 'Salvo com sucesso' );
-            
+                }
+                return back()->with('msg', 'Salvo com sucesso' );
+                   }else{
+                        return back()->with('msg', 'Por favor incluir uma  Imagem...');
+                        }
+        }
+    public function show($id)
+    {
+        $galerias = $this->VistoriaFoto->find($id); 
+      
 
-    }else{
-        return back()->with('msg', 'Por favor incluir uma  Imagem...');
-
-
+        return view('painel.galeria.deletar',compact('id', 'galerias'));
     }
 
-
-
-    }
-
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
 
 }

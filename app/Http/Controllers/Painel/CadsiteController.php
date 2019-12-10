@@ -5,17 +5,18 @@ namespace App\Http\Controllers\Painel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Painel\CadastroSite;
+use App\Album;
 
 
 class CadsiteController extends Controller
 {
-    private $CadastroSite;
-    private $totalpagina  = 10;
+    //private $CadastroSite;
+    /*private $totalpagina  = 10;
     public function __construct(CadastroSite $CadastroSite)
     {
         $this->middleware('auth');
 
-        $this->CadastroSite = $CadastroSite;
+     //   $this->CadastroSite = $CadastroSite;
         
     }
     
@@ -26,10 +27,12 @@ class CadsiteController extends Controller
      */
     public function index()
     {
+        $ftos = album::get();
+        //dd($ftos);
         $title = "Lista de site Cadastrado";
-        $sites = $this->CadastroSite->paginate($this->totalpagina);
-
-        return view ('painel.site.index', compact('sites','title'));
+      
+      
+        return view ('painel.site.index',['galerias'=>$ftos]);
     }
 
     /**
@@ -89,7 +92,7 @@ $messages = [
     public function show($id_cad_sit)
     {
         $cadastro = $this->CadastroSite->find($id_cad_sit); 
-
+        
         return view('painel.site.deletar',compact('id_cad_sit', 'cadastro'));
     }
 
